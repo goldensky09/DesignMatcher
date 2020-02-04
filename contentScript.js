@@ -24,6 +24,24 @@
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
   }
 
+  function getUniqueSelector(element) {
+        uniqueSelector='';
+        par = element;
+        while (par.parentNode.tagName!='HTML') {
+            count=1;
+            prev=par;
+            while (prev.previousElementSibling!=null){
+                count++;
+                prev=prev.previousElementSibling;
+            }
+            uniqueSelector = '>:nth-child(' + count + ')'+uniqueSelector;
+            par = par.parentNode;
+        }
+        uniqueSelector = par.tagName + uniqueSelector;
+        return uniqueSelector;
+    }
+    
+
   textNodeList.forEach((el, index) => {
     let styles = getComputedStyle(el);
     let elTagName = el.tagName.toLowerCase();
