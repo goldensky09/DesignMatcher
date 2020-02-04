@@ -23,6 +23,7 @@ function crawl() {
   var nextPage = pagesToVisit.pop();
   if (nextPage in pagesVisited) {
     // We've already visited this page, so repeat the crawl
+    console.log("We've already visited this page, so repeat the crawl");
     crawl();
   } else {
     // New page we haven't visited
