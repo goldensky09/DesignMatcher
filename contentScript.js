@@ -3,7 +3,7 @@ import {
   getTypoGraphyStyle,
   setInStorage,
   getTypographyHTML,
-  handeler
+  styleValidator
 } from "./utils/utils";
 
 const main = () => {
@@ -12,8 +12,8 @@ const main = () => {
   let stylesList = JSON.parse(localStorage.getItem("siteStyles")) || {};
   let pageStylesList = {};
   let typography = "";
-  let stylesListProxy = new Proxy(stylesList, handeler);
-  let pageStylesListProxy = new Proxy(pageStylesList, handeler);
+  let stylesListProxy = new Proxy(stylesList, styleValidator);
+  let pageStylesListProxy = new Proxy(pageStylesList, styleValidator);
 
   textNodeList.forEach(el => {
     let styles = getComputedStyle(el);

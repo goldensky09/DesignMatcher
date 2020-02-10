@@ -31,7 +31,7 @@ const getTypographyHTML = (key, fontFamily, fontSize) => {
     </div>`;
 }
 
-const handeler = {
+const styleValidator = {
     set: function(obj, prop, value) {
         const getUsage = (val) => {
             if (obj[prop] === undefined) {
@@ -54,5 +54,5 @@ export  {
     getTypoGraphyStyle,
     setInStorage,
     getTypographyHTML,
-    handeler
+    styleValidator
 }
