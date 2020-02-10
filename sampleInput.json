@@ -1,0 +1,183 @@
+{
+    "length": 18,
+    "6c20469b9b19ef191d51e34569d480d7": {
+        "styles": {
+            "fontFamily": "UniversCondensed, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "16px",
+            "color": "#428bca",
+            "lineHeight": "24px",
+            "fontWeight": "300"
+        },
+        "usage": ["a.loginBtn.bm-header_content.hidden-xs.hidden-sm.js-login"]
+    },
+    "869e350611e2ef2f233f5b51316f4886": {
+        "styles": {
+            "fontFamily": "UniversLTStd, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "0px",
+            "color": "#333333",
+            "lineHeight": "normal",
+            "fontWeight": "400"
+        },
+        "usage": ["a.gm-pos_relative.js-countryDropdown"]
+    },
+    "e2fc9ffd6d0b68d3232e73d2895acfda": {
+        "styles": {
+            "fontFamily": "UniversLTStd, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "13px",
+            "color": "#666666",
+            "lineHeight": "normal",
+            "fontWeight": "400"
+        },
+        "usage": ["a"]
+    },
+    "0fd1a0173d8775274d342ee8ef78f0bd": {
+        "styles": {
+            "fontFamily": "UniversLTStdBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "12px",
+            "color": "#7399c6",
+            "lineHeight": "normal",
+            "fontWeight": "700"
+        },
+        "usage": ["a.blueLink"]
+    },
+    "774278aaf7bead4f6a24036e4b8d101d": {
+        "styles": {
+            "fontFamily": "UniversLTStdBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "13px",
+            "color": "#333333",
+            "lineHeight": "13px",
+            "fontWeight": "700"
+        },
+        "usage": ["a.gNavListlnk", "a.gNavSubMenuLnk.bm-type_parent", "a.gNavListlnk.bm-nav_fix.bm-type_overview"]
+    },
+    "9e71e4577188e33895e9c70855cc24dc": {
+        "styles": {
+            "fontFamily": "UniversLTStd, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "12px",
+            "color": "#333333",
+            "lineHeight": "18px",
+            "fontWeight": "300"
+        },
+        "usage": ["a.gNavSubMenuLnk."]
+    },
+    "a4f9b11279476dda0b274ed07923a6ae": {
+        "styles": {
+            "fontFamily": "UniversLTStdBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "12px",
+            "color": "#333333",
+            "lineHeight": "13px",
+            "fontWeight": "700"
+        },
+        "usage": ["a.gNavListlnk.bm-nav_fix.bm-type_login.js-login"]
+    },
+    "3c0fa057604c71a584793f0f59d216cd": {
+        "styles": {
+            "fontFamily": "Overpass, \"Open Sans\", Helvetica, sans-serif",
+            "fontSize": "16px",
+            "color": "#428bca",
+            "lineHeight": "24px",
+            "fontWeight": "300"
+        },
+        "usage": ["a.js-marqueArticle.", "a"]
+    },
+    "c9d8c235468d9dfa57864fd673c634b0": {
+        "styles": {
+            "fontFamily": "UniversLTStdBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "12px",
+            "color": "#ffffff",
+            "lineHeight": "24px",
+            "fontWeight": "700"
+        },
+        "usage": ["a.marquee__lnkBtn.bm-type_heroArticle.js-marqueArticle-btn."]
+    },
+    "be14bb8199c2a1db86ac4e1d91272207": {
+        "styles": {
+            "fontFamily": "Overpass, \"Open Sans\", Helvetica, sans-serif",
+            "fontSize": "0px",
+            "color": "#428bca",
+            "lineHeight": "24px",
+            "fontWeight": "300"
+        },
+        "usage": ["a.clikableTile", "a.multipurposeCard__item.js-articleCardItem.bm-col_3.bm-pos_rel"]
+    },
+    "eb4ded60df7acdbdb61a7719721092fe": {
+        "styles": {
+            "fontFamily": "UniversLTStdBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "11px",
+            "color": "#ffffff",
+            "lineHeight": "24px",
+            "fontWeight": "700"
+        },
+        "usage": ["a.marquee__lnkBtn.bm-type_heroArticle2.js-marqueArticle-btn."]
+    },
+    "9c592f85c9e159bb7ced952b9e17b381": {
+        "styles": {
+            "fontFamily": "UniversLTStdBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "11px",
+            "color": "#ffffff",
+            "lineHeight": "normal",
+            "fontWeight": "700"
+        },
+        "usage": ["a.js-link.sitemapNavigation__headerLink."]
+    },
+    "bcf22f1fe76bd5c881fda1284bc49db0": {
+        "styles": {
+            "fontFamily": "UniversLTStd, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "12px",
+            "color": "#999999",
+            "lineHeight": "normal",
+            "fontWeight": "400"
+        },
+        "usage": ["a.js-link.sitemapNavigationItem__link.."]
+    },
+    "9a2df0c15652c95a36b3c0022e07a2ba": {
+        "styles": {
+            "fontFamily": "UniversLTStd, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "12px",
+            "color": "#456c96",
+            "lineHeight": "normal",
+            "fontWeight": "400"
+        },
+        "usage": ["a#lnkToggleDisclaimer.disclaimer__viewBtn.noPrint.hide"]
+    },
+    "5608d5e2720f7836d404b4b1af0ecead": {
+        "styles": {
+            "fontFamily": "UniversLTStd, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "14px",
+            "color": "#666666",
+            "lineHeight": "normal",
+            "fontWeight": "400"
+        },
+        "usage": ["a.navFtr__itm__link", "a.navFtr__itm__link.delete_ecookie"]
+    },
+    "56aa48d0f5dbbc8c28df4527e40b1ec2": {
+        "styles": {
+            "fontFamily": "UniversLTStdLight, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "14px",
+            "color": "#666666",
+            "lineHeight": "normal",
+            "fontWeight": "400"
+        },
+        "usage": ["a.hint__links__anc"]
+    },
+    "ded21ebc4cbd14260876491b9ba8e627": {
+        "styles": {
+            "fontFamily": "UniversCondensed, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "14px",
+            "color": "#f1f1f1",
+            "lineHeight": "24px",
+            "fontWeight": "700"
+        },
+        "usage": ["a.blueButton.blackPopup__okBtn..js-emailSend"]
+    },
+    "1f75ceb88d3a1e8d2cb1693615ddbef9": {
+        "styles": {
+            "fontFamily": "UniversCondensedBold, Meiryo, \"Hiragino Kaku Gothic Pro\"",
+            "fontSize": "16px",
+            "color": "#5f7ea3",
+            "lineHeight": "24px",
+            "fontWeight": "700"
+        },
+        "usage": ["a.blackPopup__cancelBtn.js-emailCancel.hidden-sm.hidden-md.hidden-lg"]
+    }
+}

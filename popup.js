@@ -7,7 +7,7 @@
 // }
 document.addEventListener("DOMContentLoaded", function (e) {
   chrome.tabs.executeScript({
-    file: 'c1ontentScript123.js'
+    file: 'dist/contentScript.js'
   }, function () {
     chrome.storage.local.get("typography", function (typographyHTML) {
       console.log("length",typographyHTML.typography.length, typographyHTML, document.getElementById("typography"));
