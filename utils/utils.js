@@ -25,8 +25,8 @@ const setInStorage = (key, val) => {
 const getTypographyHTML = (key, fontFamily, fontSize) => {
     return `<div id='${key}'>
         <span style='font-family:${fontFamily}; font-size: ${fontSize}'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </span>
     </div>`;
 }

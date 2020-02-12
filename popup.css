@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!--<link rel="stylesheet" href="popup.css">-->
-  <style>
-    button {
+button {
     height: 30px;
     /* width: 30px; */
     outline: none;
@@ -408,39 +403,3 @@ Demo purposes only
   .style-toggle {
     display: flex;
   }
-  </style>
-</head>
-<body>
-  <div class="style-toggle">
-    <h2 style="float: left;">Style Scope</h2>
-    <ul class="tg-list">
-      <li class="tg-list-item">
-        <input class="tgl tgl-flip" id="cb5" type="checkbox" />
-        <label class="tgl-btn" data-tg-off="Page" data-tg-on="Site!" for="cb5"></label>
-      </li>
-    </ul>
-  </div>
-  <div class="tabset">
-    <!-- Tab 1 -->
-    <input type="radio" name="tabset" id="tab1" aria-controls="typography" checked>
-    <label for="tab1">Typography</label>
-    <!-- Tab 2 -->
-    <input type="radio" name="tabset" id="tab2" aria-controls="colors">
-    <label for="tab2">Colors</label>
-    <!-- Tab 3 -->
-    <input type="radio" name="tabset" id="tab3" aria-controls="smtelse">
-    <label for="tab3">Something Else</label>
-
-    <div class="tab-panels">
-      <section id="typography" class="tab-panel">
-      </section>
-      <section id="colors" class="tab-panel">
-      </section>
-      <section id="smtelse" class="tab-panel">  
-      </section>
-    </div>
-  </div>
-  <script src="popup.js"></script>
-</body>
-
-</html>
