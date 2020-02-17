@@ -49,10 +49,26 @@ const styleValidator = {
     }
 }
 
+const getFormattedStyle = style => {
+    let res = [];
+    for (let i in style)  {
+        let item = style[i];
+        let obj = {
+            styles : item.styles,
+            usage : item.usage,
+            type : item.usage[0].split(".")[0],
+            id : i
+        }
+        res.push(obj);
+    }
+    return res;
+}
+
 
 export  {
     getTypoGraphyStyle,
     setInStorage,
     getTypographyHTML,
-    styleValidator
+    styleValidator,
+    getFormattedStyle
 }
