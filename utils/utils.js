@@ -20,6 +20,10 @@ const getTypoGraphyStyle = styles => {
 
 const setInStorage = (key, val) => {
     localStorage.setItem(key, JSON.stringify(val));
+    chrome.storage.local.set({key: JSON.stringify(val)}, function() {
+        console.log('Value is set to ' + JSON.stringify(val));
+      });
+    // console.log(val);
 }
 
 const getTypographyHTML = (key, fontFamily, fontSize) => {
@@ -64,11 +68,36 @@ const getFormattedStyle = style => {
     return res;
 }
 
+const exportJSON = (data, filename) => {
+
+    if(!data) {
+        console.error('exportJSON : No data')
+        return;
+    }
+
+    if(!filename) filename = 'siteStyles.json'
+
+    if(typeof data === "object"){
+        data = JSON.stringify(data, undefined, 4)
+    }
+
+    var blob = new Blob([data], {type: 'text/json'}),
+        e    = document.createEvent('MouseEvents'),
+        a    = document.createElement('a')
+
+    a.download = filename
+    a.href = window.URL.createObjectURL(blob)
+    a.dataset.downloadurl =  ['text/json', a.download, a.href].join(':')
+    e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
+    a.dispatchEvent(e)
+ }
+
 
 export  {
     getTypoGraphyStyle,
     setInStorage,
     getTypographyHTML,
     styleValidator,
-    getFormattedStyle
+    getFormattedStyle,
+    exportJSON
 }

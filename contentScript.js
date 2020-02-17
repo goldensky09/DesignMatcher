@@ -3,7 +3,8 @@ import {
   getTypoGraphyStyle,
   setInStorage,
   getTypographyHTML,
-  styleValidator
+  styleValidator,
+  exportJSON
 } from "./utils/utils";
 
 const main = () => {
@@ -30,10 +31,13 @@ const main = () => {
 
   chrome.storage.local.set({typography: typography});
 
-  fetch(chrome.extension.getURL('/popup.html'))
+  !document.getElementById("designMatcher") && fetch(chrome.extension.getURL('/popup.html'))
     .then(response => response.text())
     .then(data => {
         document.body.innerHTML += data;
+        document.getElementById("exportJSON").addEventListener("click", function(){
+          exportJSON(localStorage.getItem("siteStyles"));
+        })
     }).catch(err => {
     });
   

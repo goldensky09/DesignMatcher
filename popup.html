@@ -3,11 +3,6 @@
 <head>
   <!--<link rel="stylesheet" href="popup.css">-->
   <style>
-    button {
-    height: 30px;
-    /* width: 30px; */
-    outline: none;
-  }
 
   ul,
   li {
@@ -339,11 +334,16 @@ CSS for the main interaction
   /*
 Styling
 */
-  body {
-    font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-    color: #333;
-    font-weight: 300;
-    width: 500px;
+  .designMatcher {
+    position: fixed;
+    right: 0px;
+    z-index: 9;
+    top: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 1px 1px 4px #000000;
+    height: 100vh;
+    width: 450px;
   }
 
   .tabset>label {
@@ -388,18 +388,6 @@ Styling
     border-top: 1px solid #ccc;
   }
 
-  /*
-Demo purposes only
-*/
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
-
-  body {
-    padding: 30px;
-  }
 
   .tabset {
     max-width: 65em;
@@ -408,36 +396,60 @@ Demo purposes only
   .style-toggle {
     display: flex;
   }
+
+  button.handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -33px;
+    background: red;
+    border-radius: 50% 0 0 50%;
+    padding: 10px 10px 14px 10px;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  #designMatcher.active {
+    right : -450px;
+  }
   </style>
 </head>
 <body>
-  <div class="style-toggle">
-    <h2 style="float: left;">Style Scope</h2>
-    <ul class="tg-list">
-      <li class="tg-list-item">
-        <input class="tgl tgl-flip" id="cb5" type="checkbox" />
-        <label class="tgl-btn" data-tg-off="Page" data-tg-on="Site!" for="cb5"></label>
-      </li>
-    </ul>
-  </div>
-  <div class="tabset">
-    <!-- Tab 1 -->
-    <input type="radio" name="tabset" id="tab1" aria-controls="typography" checked>
-    <label for="tab1">Typography</label>
-    <!-- Tab 2 -->
-    <input type="radio" name="tabset" id="tab2" aria-controls="colors">
-    <label for="tab2">Colors</label>
-    <!-- Tab 3 -->
-    <input type="radio" name="tabset" id="tab3" aria-controls="smtelse">
-    <label for="tab3">Something Else</label>
-
-    <div class="tab-panels">
-      <section id="typography" class="tab-panel">
-      </section>
-      <section id="colors" class="tab-panel">
-      </section>
-      <section id="smtelse" class="tab-panel">  
-      </section>
+  <div class="designMatcher" id="designMatcher">
+    <button class="handle" id="handleSlide"><</button>
+    <div class="style-toggle">
+      <h2 style="float: left;">Style Scope</h2>
+      <ul class="tg-list">
+        <li class="tg-list-item">
+          <input class="tgl tgl-flip" id="scopeToggle" type="checkbox" />
+          <label class="tgl-btn" data-tg-off="Page" data-tg-on="Site!" for="scopeToggle"></label>
+        </li>
+        <li class="tg-list-item">
+          <input class="tgl tgl-flip" id="exportJSON" type="button">
+          <label class="tgl-btn" data-tg-off="Export!" data-tg-on="Site!" for="exportJSON"></label>
+        </li>
+      </ul>
+    </div>
+    <div class="tabset">
+      <!-- Tab 1 -->
+      <input type="radio" name="tabset" id="tab1" aria-controls="typography" checked>
+      <label for="tab1">Typography</label>
+      <!-- Tab 2 -->
+      <input type="radio" name="tabset" id="tab2" aria-controls="colors">
+      <label for="tab2">Colors</label>
+      <!-- Tab 3 -->
+      <input type="radio" name="tabset" id="tab3" aria-controls="smtelse">
+      <label for="tab3">Something Else</label>
+  
+      <div class="tab-panels">
+        <section id="typography" class="tab-panel">
+        </section>
+        <section id="colors" class="tab-panel">
+        </section>
+        <section id="smtelse" class="tab-panel">  
+        </section>
+      </div>
     </div>
   </div>
   <script src="popup.js"></script>
