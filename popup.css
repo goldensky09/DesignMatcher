@@ -1,8 +1,0 @@
-button {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-  text-align: center;
-  line-height: 2em;
-  font-weight: bold;
-  border-radius: 4px;
-}

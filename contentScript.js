@@ -37,7 +37,10 @@ const main = () => {
         document.body.innerHTML += data;
         document.getElementById("exportJSON").addEventListener("click", function(){
           exportJSON(localStorage.getItem("siteStyles"));
-        })
+        });
+        document.getElementById("handleSlide").addEventListener("click", function(){
+          document.getElementById("designMatcher").classList.toggle("active");
+        });
     }).catch(err => {
     });
   
