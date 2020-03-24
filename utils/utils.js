@@ -1,3 +1,5 @@
+import MD5 from "md5";
+
 const hex = x => ("0" + parseInt(x).toString(16)).slice(-2);
 
 const rgb2hex = rgb => {
@@ -92,12 +94,49 @@ const exportJSON = (data, filename) => {
     a.dispatchEvent(e)
  }
 
+ const addResponsive = () => {
+     const _url = "https://www.gsam.com/content/gsam/us/en/institutions/homepage.html";
+     document.querySelector("#disclaimerId").innerHTML = "<iframe id='gsamFrame' src='"+_url+"' width='440px' height='600px'></iframe>"
+     //document.body.appendChild()
+
+    //  const gsamFrame = document.createElement("iframe");
+    //  gsamFrame.id = "gsamFrame";
+    //  gsamFrame.setAttribute("name", "gsamFrame");
+    //  gsamFrame.src = "";
+
+
+ }
+
+ const extractStyle = (root, storageKey) => {
+    let nodeList = [...root.querySelectorAll("body *:not(script)")];
+    let textNodeList = nodeList.filter(el => el.text && el.text.trim().length ? true : false);
+    let stylesList = JSON.parse(localStorage.getItem(storageKey)) || {};
+    let stylesListProxy = new Proxy(stylesList, styleValidator);
+
+    textNodeList.forEach(el => {
+        let styles = getComputedStyle(el);
+        let elTagName = el.tagName.toLowerCase();
+        let elId = el.id.length ? "#" + el.id : "";
+        let elClasses = el.className.length ? "." + el.className.replace(/ /g, ".") : "";
+        let selector = elTagName + elId + elClasses;
+        const filtered = getTypoGraphyStyle(styles);
+        let key = MD5(unescape(encodeURIComponent(JSON.stringify(filtered))));
+        stylesListProxy[key] = [filtered, selector, elTagName];
+    });
+    return stylesList;
+ }
+
+ const exportMobileStyle = () => {
+     let frame = document.querySelector("#gsamFrame");
+     let frameDom = frame.contentDocument;
+     let style = extractStyle(frameDom, "frameStle");
+     exportJSON(style, "mobileStyle");
+ }
 
 export  {
-    getTypoGraphyStyle,
     setInStorage,
-    getTypographyHTML,
-    styleValidator,
-    getFormattedStyle,
-    exportJSON
+    exportJSON,
+    addResponsive,
+    extractStyle,
+    exportMobileStyle
 }
