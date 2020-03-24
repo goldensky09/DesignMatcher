@@ -24,10 +24,7 @@ const main = () => {
         });
         document.getElementById("downnloadMobileStyle").addEventListener("click", function(){
           exportMobileStyle();
-        });
-
-        
-        
+        }); 
     }).catch(err => {
     });
   setInStorage("siteStyles", stylesList);
