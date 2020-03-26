@@ -1,7 +1,5 @@
 import MD5 from "md5";
-
 const hex = x => ("0" + parseInt(x).toString(16)).slice(-2);
-
 const rgb2hex = rgb => {
     if (/^#[0-9A-F]{6}$/i.test(rgb)) {
         return rgb;
@@ -9,7 +7,6 @@ const rgb2hex = rgb => {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
-
 const getTypoGraphyStyle = styles => {
     return  {
       fontFamily: styles.fontFamily,
@@ -19,15 +16,12 @@ const getTypoGraphyStyle = styles => {
       fontWeight: styles.fontWeight
     }
 }
-
 const setInStorage = (key, val) => {
     localStorage.setItem(key, JSON.stringify(val));
     chrome.storage.local.set({key: JSON.stringify(val)}, function() {
         console.log('Value is set to ' + JSON.stringify(val));
-      });
-    // console.log(val);
+    });
 }
-
 const getTypographyHTML = (key, fontFamily, fontSize) => {
     return `<div id='${key}'>
         <span style='font-family:${fontFamily}; font-size: ${fontSize}'>
@@ -36,7 +30,6 @@ const getTypographyHTML = (key, fontFamily, fontSize) => {
         </span>
     </div>`;
 }
-
 const styleValidator = {
     set: function(obj, prop, value) {
         const getUsage = (val) => {
@@ -54,7 +47,6 @@ const styleValidator = {
         return true;
     }
 }
-
 const getFormattedStyle = style => {
     let res = [];
     for (let i in style)  {
@@ -69,16 +61,11 @@ const getFormattedStyle = style => {
     }
     return res;
 }
-
-const exportJSON = (data, filename) => {
-
+const exportJSON = (data, filename = 'siteStyles.json') => {
     if(!data) {
         console.error('exportJSON : No data')
         return;
     }
-
-    if(!filename) filename = 'siteStyles.json'
-
     if(typeof data === "object"){
         data = JSON.stringify(data, undefined, 4)
     }
@@ -97,14 +84,6 @@ const exportJSON = (data, filename) => {
  const addResponsive = () => {
      const _url = "https://www.gsam.com/content/gsam/us/en/institutions/homepage.html";
      document.querySelector("#disclaimerId").innerHTML = "<iframe id='gsamFrame' src='"+_url+"' width='440px' height='600px'></iframe>"
-     //document.body.appendChild()
-
-    //  const gsamFrame = document.createElement("iframe");
-    //  gsamFrame.id = "gsamFrame";
-    //  gsamFrame.setAttribute("name", "gsamFrame");
-    //  gsamFrame.src = "";
-
-
  }
 
  const extractStyle = (root, storageKey) => {
